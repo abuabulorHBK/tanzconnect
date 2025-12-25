@@ -189,18 +189,19 @@ export default function CreateEntrepreneurProfile() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Funding Needed (TZS Millions) *</label>
+              <label className="block text-sm font-medium mb-2">Funding Needed (TZS) *</label>
               <input
                 type="number"
                 required
-                min="1"
-                max="1000"
+                min="100000"
+                max="500000000"
+                step="100000"
                 value={fundingNeeded}
                 onChange={(e) => setFundingNeeded(e.target.value)}
                 className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500"
-                placeholder="e.g., 50 (for TZS 50M)"
+                placeholder="e.g., 50000000 (50M TZS)"
               />
-              <p className="text-sm text-gray-500 mt-1">Enter amount in millions</p>
+              <p className="text-sm text-gray-500 mt-1">Enter amount in Tanzanian Shillings (TZS)</p>
             </div>
 
             <div>
